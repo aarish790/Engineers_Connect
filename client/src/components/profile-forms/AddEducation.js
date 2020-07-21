@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addEducation } from '../../actions/profile';
@@ -34,7 +34,8 @@ const AddEducation = ({ addEducation, history }) => {
     <Fragment>
       <h1 className='large text-primary'>Add Your Education</h1>
       <p className='lead'>
-        <i className='fas fa-code-branch' /> Add school that you have attended
+        <i className='fas fa-code-branch' /> Add your school and online courses
+        that you have attended
       </p>
       <small>* = required field</small>
       <form
@@ -47,7 +48,7 @@ const AddEducation = ({ addEducation, history }) => {
         <div className='form-group'>
           <input
             type='text'
-            placeholder='* School'
+            placeholder='* School or Website'
             name='school'
             value={school}
             onChange={onChange}
@@ -125,4 +126,4 @@ AddEducation.propTypes = {
   addEducation: PropTypes.func.isRequired,
 };
 
-export default connect(null, { addEducation })(AddEducation);
+export default connect(null, { addEducation })(withRouter(AddEducation));
