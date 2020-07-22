@@ -8,6 +8,7 @@ import {
   ADD_POST,
   ADD_COMMENT,
   REMOVE_COMMENT,
+  GET_POST,
 } from './types';
 
 // Get posts
@@ -138,7 +139,7 @@ export const addComment = (postId, formData) => async (dispatch) => {
 // Delete comment
 export const deleteComment = (postId, commentId) => async (dispatch) => {
   try {
-    await api.delete(`/posts/comment/${postId}/${commentId}`);
+    await axios.delete(`/api/posts/comment/${postId}/${commentId}`);
 
     dispatch({
       type: REMOVE_COMMENT,

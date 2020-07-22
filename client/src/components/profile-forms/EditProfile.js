@@ -80,21 +80,22 @@ const EditProfile = ({
       <form className='form' onSubmit={(e) => onSubmit(e)}>
         <div className='form-group'>
           <select name='status' value={status} onChange={(e) => onChange(e)}>
-            <option value='0'>* Select Professional Status</option>
+            <option value='0'>* Select Professional/Learning Status</option>
             <option value='Developer'>Developer</option>
-            <option value='Junior Developer'>Junior Developer</option>
-            <option value='Senior Developer'>Senior Developer</option>
-            <option value='Electronics & Communication Engineer'>
-              Electronics & Communication Engineer
+
+            <option value='Electronics & Communication Engineering'>
+              Electronics & Communication Engineering
             </option>
-            <option value='Computer Science Engineer'>
-              Computer Science Engineer
+            <option value='Computer Science & Engineering'>
+              Computer Science & Engineering
             </option>
-            <option value='Electrical & Electronics Engineer'>
-              Electrical & Electronics Engineer
+            <option value='Electrical & Electronics Engineering'>
+              Electrical & Electronics Engineering
             </option>
-            <option value='Civil Engineer'>Civil Engineer</option>
-            <option value='Mechanical Engineer'>Mechanical Engineer</option>
+            <option value='Civil Engineering'>Civil Engineering</option>
+            <option value='Mechanical Engineering'>
+              Mechanical Engineering
+            </option>
             <option value='Manager'>Manager</option>
             <option value='Student or Learning'>Student or Learning</option>
             <option value='Instructor'>Instructor or Teacher</option>
