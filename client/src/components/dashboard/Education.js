@@ -4,6 +4,7 @@ import Moment from 'react-moment';
 import moment from 'moment';
 import { connect } from 'react-redux';
 import { deleteEducation } from '../../actions/profile';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 const Education = ({ education, deleteEducation }) => {
   const educations = education.map((edu) => (
@@ -23,7 +24,7 @@ const Education = ({ education, deleteEducation }) => {
           onClick={() => deleteEducation(edu._id)}
           className='btn btn-danger'
         >
-          Delete
+          <DeleteIcon></DeleteIcon>
         </button>
       </td>
     </tr>
